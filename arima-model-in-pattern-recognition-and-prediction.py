@@ -86,7 +86,6 @@ fig = decomposition.plot();
 # 
 # * A large p-value (> 0.05) indicates weak evidence against the null hypothesis, so you fail to reject the null hypothesis.
 # 
-
 from statsmodels.tsa.stattools import adfuller
 result = adfuller(df['candy_production'])
 print('Augmented Dickey-Fuller Test:')
@@ -98,7 +97,7 @@ if result[1] <= 0.05:
 else:
     print("weak evidence against null hypothesis, time series has a unit root, indicating it is non-stationary ")
 
-# Store in a function for later use!
+# Store a function for later use!
 def adf_check(time_series):
     """
     Pass in a time series, returns ADF report
@@ -112,7 +111,6 @@ def adf_check(time_series):
         print("strong evidence against the null hypothesis, reject the null hypothesis. Data has no unit root and is stationary")
     else:
         print("weak evidence against null hypothesis, time series has a unit root, indicating it is non-stationary ")
-
 
 # ## Differencing
 # 
@@ -129,7 +127,6 @@ def adf_check(time_series):
 df['First Difference'] = df['candy_production'] - df['candy_production'].shift(1)
 adf_check(df['First Difference'].dropna())
 df['First Difference'].plot(figsize=(20,10));
-
 
 # ### Second Difference  
 # Sometimes it would be necessary to do a second difference 
@@ -174,7 +171,6 @@ fig_first = plot_acf(df["First Difference"].dropna())
 fig_seasonal_first = plot_acf(df["Seasonal First Difference"].dropna())
 from pandas.plotting import autocorrelation_plot
 autocorrelation_plot(df['Seasonal First Difference'].dropna());
-
 
 # ### Partial Autocorrelation
 # 
@@ -230,7 +226,7 @@ from statsmodels.tsa.arima_model import ARIMA
 df.describe()
 df.index = pd.DatetimeIndex(df.index, freq='MS')
 
-# modelling with seasonal data
+# modeling with seasonal data
 model = sm.tsa.statespace.SARIMAX(df['candy_production'],
                                   order=(0,1,0),
                                   freq = 'MS',
@@ -239,7 +235,6 @@ results = model.fit()
 print(results.summary())
 results.resid.plot(figsize=(20,10));
 results.resid.plot(kind='kde',figsize=(20,10));
-
 
 # ### Projection of Future Values 
 # 
