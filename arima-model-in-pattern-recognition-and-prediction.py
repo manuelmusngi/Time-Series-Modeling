@@ -70,7 +70,6 @@ fig = plt.figure()
 fig = fig.set_size_inches(10, 5)
 fig = decomposition.plot();
 
-
 # ### Test stationarity of time series data
 # 
 # In statistics and econometrics, the augmented Dickey–Fuller test (ADF) tests the null hypothesis that a unit root 
@@ -123,7 +122,6 @@ def adf_check(time_series):
 # 
 # The first difference of a time series is the series of changes from one period to the next. If Yt denotes the value of 
 # the time series Y at period t, then the first difference of Y at period t is equal to Yt-Yt-1.
-
 df['First Difference'] = df['candy_production'] - df['candy_production'].shift(1)
 adf_check(df['First Difference'].dropna())
 df['First Difference'].plot(figsize=(20,10));
