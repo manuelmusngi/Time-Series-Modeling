@@ -1,4 +1,4 @@
-# Time-Series-Modeling
+# time_series_analysis_and_volatility_modeling
 
 Time series forecasting is the use of a model to predict future values based on previously observed values. While regression analysis is often employed in such a way as to test relationships.
 
