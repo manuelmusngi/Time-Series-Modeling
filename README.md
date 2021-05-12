@@ -6,3 +6,13 @@ Models for time series data can have many forms and represent different stochast
 
 Source: Wikipedia 
 https://en.wikipedia.org/wiki/Time_series#Models
+
+
+In finance, volatility (usually denoted by σ) is the degree of variation of a trading price series over time, usually measured by the standard deviation of logarithmic returns.
+
+Historic volatility measures a time series of past market prices. Implied volatility looks forward in time, being derived from the market price of a market-traded derivative (in particular, an option).
+
+The Generalized Autoregressive Conditional Heteroskedasticity (GARCH) model is another popular model for estimating stochastic volatility. It assumes that the randomness of the variance process varies with the variance, as opposed to the square root of the variance as in the Heston model.
+
+Source: Wikipedia 
+https://en.wikipedia.org/wiki/Stochastic_volatility#GARCH_model
