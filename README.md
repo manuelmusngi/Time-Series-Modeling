@@ -14,5 +14,8 @@ Historic volatility measures a time series of past market prices. Implied volati
 
 The Generalized Autoregressive Conditional Heteroskedasticity (GARCH) model is another popular model for estimating stochastic volatility. It assumes that the randomness of the variance process varies with the variance, as opposed to the square root of the variance as in the Heston model.
 
+
+The projects included in this repository are examples of Time Series Analysis and Volatility Modeling.
+
 Wikipedia resource:
 https://en.wikipedia.org/wiki/Stochastic_volatility
